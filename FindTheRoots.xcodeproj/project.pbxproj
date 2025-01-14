@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F48229DB2D36C31800836DEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48229D82D36C31800836DEE /* ContentView.swift */; };
+		F48229DC2D36C31800836DEE /* FindTheRootsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48229D92D36C31800836DEE /* FindTheRootsApp.swift */; };
+		F48229DD2D36C31800836DEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48229D52D36C31800836DEE /* Preview Assets.xcassets */; };
+		F48229DE2D36C31800836DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48229D72D36C31800836DEE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F48229C42D36C2E100836DEE /* FindTheRoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheRoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48229D52D36C31800836DEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F48229D72D36C31800836DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F48229D82D36C31800836DEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F48229D92D36C31800836DEE /* FindTheRootsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheRootsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F48229C62D36C2E100836DEE /* FindTheRoots */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FindTheRoots;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F48229C12D36C2E000836DEE /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		F48229BB2D36C2E000836DEE = {
 			isa = PBXGroup;
 			children = (
-				F48229C62D36C2E100836DEE /* FindTheRoots */,
+				F48229DA2D36C31800836DEE /* FindTheRoots */,
 				F48229C52D36C2E100836DEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,33 @@
 				F48229C42D36C2E100836DEE /* FindTheRoots.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F48229D62D36C31800836DEE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F48229D52D36C31800836DEE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F48229DA2D36C31800836DEE /* FindTheRoots */ = {
+			isa = PBXGroup;
+			children = (
+				F48229DF2D36C31B00836DEE /* Views */,
+				F48229D62D36C31800836DEE /* Preview Content */,
+				F48229D72D36C31800836DEE /* Assets.xcassets */,
+				F48229D92D36C31800836DEE /* FindTheRootsApp.swift */,
+			);
+			path = FindTheRoots;
+			sourceTree = "<group>";
+		};
+		F48229DF2D36C31B00836DEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F48229D82D36C31800836DEE /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +89,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F48229C62D36C2E100836DEE /* FindTheRoots */,
 			);
 			name = FindTheRoots;
 			packageProductDependencies = (
@@ -109,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48229DD2D36C31800836DEE /* Preview Assets.xcassets in Resources */,
+				F48229DE2D36C31800836DEE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48229DB2D36C31800836DEE /* ContentView.swift in Sources */,
+				F48229DC2D36C31800836DEE /* FindTheRootsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
