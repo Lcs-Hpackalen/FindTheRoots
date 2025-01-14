@@ -11,6 +11,8 @@
 		F48229DC2D36C31800836DEE /* FindTheRootsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48229D92D36C31800836DEE /* FindTheRootsApp.swift */; };
 		F48229DD2D36C31800836DEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48229D52D36C31800836DEE /* Preview Assets.xcassets */; };
 		F48229DE2D36C31800836DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48229D72D36C31800836DEE /* Assets.xcassets */; };
+		F48229E22D36CD5200836DEE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48229E12D36CD5200836DEE /* Result.swift */; };
+		F48229E42D36CD9300836DEE /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48229E32D36CD9300836DEE /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F48229D72D36C31800836DEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48229D82D36C31800836DEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F48229D92D36C31800836DEE /* FindTheRootsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheRootsApp.swift; sourceTree = "<group>"; };
+		F48229E12D36CD5200836DEE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F48229E32D36CD9300836DEE /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		F48229DA2D36C31800836DEE /* FindTheRoots */ = {
 			isa = PBXGroup;
 			children = (
+				F48229E02D36CD3A00836DEE /* models */,
 				F48229DF2D36C31B00836DEE /* Views */,
 				F48229D62D36C31800836DEE /* Preview Content */,
 				F48229D72D36C31800836DEE /* Assets.xcassets */,
@@ -71,8 +76,17 @@
 			isa = PBXGroup;
 			children = (
 				F48229D82D36C31800836DEE /* ContentView.swift */,
+				F48229E32D36CD9300836DEE /* ResultView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F48229E02D36CD3A00836DEE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F48229E12D36CD5200836DEE /* Result.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48229E22D36CD5200836DEE /* Result.swift in Sources */,
+				F48229E42D36CD9300836DEE /* ResultView.swift in Sources */,
 				F48229DB2D36C31800836DEE /* ContentView.swift in Sources */,
 				F48229DC2D36C31800836DEE /* FindTheRootsApp.swift in Sources */,
 			);

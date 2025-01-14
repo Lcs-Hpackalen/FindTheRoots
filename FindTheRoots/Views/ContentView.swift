@@ -18,7 +18,7 @@ struct RootsCalculatorView: View {
         
         let discriminant = valueB * valueB - 4 * valueA * valueC
         
-        if discriminant > 0 {
+        if discriminant < 0 {
             return "No real roots"
         } else {
             let x1 = (valueB * -1 + discriminant.squareRoot()) / (2 * valueA)
@@ -55,6 +55,7 @@ struct RootsCalculatorView: View {
                 Slider(value: $valueB, in: -10...10)
                 Slider(value: $valueC, in: -10...10)
             }
+            Text("\(result)").font (Font.custom( "Times New Roman", size: 34))
         }
         .padding()
     }
