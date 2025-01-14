@@ -9,12 +9,26 @@ import SwiftUI
 
 struct RootsCalculatorView: View {
     //Mark: Stored properties
-    var valueA: Double = 3.0
-    var valueB: Double = 2.0
-    var valueC: Double = 1.0
+    @State var valueA: Double = 3.0
+    @State var valueB: Double = 2.0
+    @State var valueC: Double = 1.0
     //Mark: Computed properties
+    
+    var result: String {
+        
+        let discriminant = valueB * valueB - 4 * valueA * valueC
+        
+        if discriminant > 0 {
+            return "No real roots"
+        } else {
+            let x1 = (valueB * -1 + discriminant.squareRoot()) / (2 * valueA)
+            let x2 = (valueB * -1 - discriminant.squareRoot()) / (2 * valueA)
+            return "x ≈ \(x1.formatted(.number.precision(.fractionLength(2)))) and x ≈ \(x2.formatted(.number.precision(.fractionLength(2))))"
+        }
+        }
+    
     var body: some View {
-        VStack(content: .top) {
+        VStack() {
             HStack {
                 Text ("Find the Roots")
                     .font (Font.custom( "Times New Roman", size: 44))
@@ -35,6 +49,11 @@ struct RootsCalculatorView: View {
                 Spacer()
                 Text ("c: \(valueC.formatted(.number.precision(.fractionLength(1))))")
                     .padding()
+            }
+            HStack {
+                Slider(value: $valueA, in: -10...10)
+                Slider(value: $valueB, in: -10...10)
+                Slider(value: $valueC, in: -10...10)
             }
         }
         .padding()
