@@ -15,12 +15,12 @@ struct ResultView: View {
         VStack(spacing: 10) {
             
             HStack(spacing:30){
-                Text ("a: \(a.formatted(.number.precision(.fractionLength(1))))")
+                Text ("a: \(somePriorResult.a.formatted(.number.precision(.fractionLength(1))))")
                     .padding()
                 Spacer()
-                Text ("b: \(b.formatted(.number.precision(.fractionLength(1))))")
+                Text ("b: \(somePriorResult.b.formatted(.number.precision(.fractionLength(1))))")
                 Spacer()
-                Text ("c: \(c.formatted(.number.precision(.fractionLength(1))))")
+                Text ("c: \(somePriorResult.c.formatted(.number.precision(.fractionLength(1))))")
                     .padding()
             }
             

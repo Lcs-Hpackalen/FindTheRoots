@@ -12,6 +12,10 @@ struct RootsCalculatorView: View {
     @State var valueA: Double = 3.0
     @State var valueB: Double = 2.0
     @State var valueC: Double = 1.0
+    
+    // List prior results
+    @State var priorResults: [Result] = []
+    
     //Mark: Computed properties
     
     var result: String {
@@ -28,36 +32,46 @@ struct RootsCalculatorView: View {
         }
     
     var body: some View {
-        VStack() {
-            HStack {
-                Text ("Find the Roots")
-                    .font (Font.custom( "Times New Roman", size: 44))
-                Spacer()
+        NavigationStack {
+            VStack() {
+                HStack {
+                    Text ("Find the Roots")
+                        .font (Font.custom( "Times New Roman", size: 44))
+                    Spacer()
+                }
+                Image("RootsCalculation")
+                    .resizable()
+                    .scaledToFit()
+                Divider()
+                Image("StandardForm")
+                    .resizable()
+                    .scaledToFit()
+                HStack{
+                    Text ("a: \(valueA.formatted(.number.precision(.fractionLength(1))))")
+                        .padding()
+                    Spacer()
+                    Text ("b: \(valueB.formatted(.number.precision(.fractionLength(1))))")
+                    Spacer()
+                    Text ("c: \(valueC.formatted(.number.precision(.fractionLength(1))))")
+                        .padding()
+                }
+                HStack {
+                    Slider(value: $valueA, in: -10...10)
+                    Slider(value: $valueB, in: -10...10)
+                    Slider(value: $valueC, in: -10...10)
+                }
+                Text("\(result)").font (Font.custom( "Times New Roman", size: 34))
+                Button(action:{
+                    let latestResult = Result(a: valueA, b: valueB, c: valueC, roots: result)
+                    priorResults.append(latestResult)
+                }, label: {
+                    Text ("Save Result")
+                })
+                .buttonStyle(.bordered)
+                .padding()
             }
-            Image("RootsCalculation")
-                .resizable()
-                .scaledToFit()
-            Divider()
-            Image("StandardForm")
-                .resizable()
-                .scaledToFit()
-            HStack{
-                Text ("a: \(valueA.formatted(.number.precision(.fractionLength(1))))")
-                    .padding()
-                Spacer()
-                Text ("b: \(valueB.formatted(.number.precision(.fractionLength(1))))")
-                Spacer()
-                Text ("c: \(valueC.formatted(.number.precision(.fractionLength(1))))")
-                    .padding()
-            }
-            HStack {
-                Slider(value: $valueA, in: -10...10)
-                Slider(value: $valueB, in: -10...10)
-                Slider(value: $valueC, in: -10...10)
-            }
-            Text("\(result)").font (Font.custom( "Times New Roman", size: 34))
+            .padding()
         }
-        .padding()
     }
 }
 
