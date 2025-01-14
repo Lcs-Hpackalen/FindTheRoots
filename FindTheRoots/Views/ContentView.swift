@@ -14,7 +14,7 @@ struct RootsCalculatorView: View {
     var valueC: Double = 1.0
     //Mark: Computed properties
     var body: some View {
-        VStack {
+        VStack(content: .top) {
             HStack {
                 Text ("Find the Roots")
                     .font (Font.custom( "Times New Roman", size: 44))
@@ -28,7 +28,13 @@ struct RootsCalculatorView: View {
                 .resizable()
                 .scaledToFit()
             HStack{
-                
+                Text ("a: \(valueA.formatted(.number.precision(.fractionLength(1))))")
+                    .padding()
+                Spacer()
+                Text ("b: \(valueB.formatted(.number.precision(.fractionLength(1))))")
+                Spacer()
+                Text ("c: \(valueC.formatted(.number.precision(.fractionLength(1))))")
+                    .padding()
             }
         }
         .padding()
