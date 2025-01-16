@@ -16,6 +16,7 @@ struct RootsCalculatorView: View {
     // List prior results
     @State var priorResults: [Result] = []
     
+    
     //Mark: Computed properties
     
     var result: String {
@@ -69,6 +70,19 @@ struct RootsCalculatorView: View {
                 })
                 .buttonStyle(.bordered)
                 .padding()
+                HStack{
+                    Text("History")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                    List(priorResults.reversed ()) { currentresult in
+                        HStack{
+                            Spacer()
+                            ResultView(somePriorResult: currentresult)
+                            Spacer()
+                    }
+                }
             }
             .padding()
         }
